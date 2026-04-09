@@ -10,7 +10,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background-color: #0f172a;
   color: #e5e7eb;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* CONTAINER */
@@ -20,56 +20,56 @@ body {
   padding: 20px;
 }
 
-/* HEADER */
+/* ================= HEADER (PARALLAX + BLUR) ================= */
 header {
   position: relative;
-  height: 300px;
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
   overflow: hidden;
+  background: url('background.jpg') center/cover no-repeat fixed;
 }
 
-/* BACKGROUND IMAGE */
+/* BLUR LAYER */
 header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('background.jpg') center/cover no-repeat;
-  filter: blur(6px);
-  transform: scale(1.1); /* biar blur tidak kepotong */
-  z-index: 1;
+  backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.3);
 }
 
-/* OVERLAY GELAP */
+/* OVERLAY */
 header::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+}
+
+/* ISI */
+header .container {
+  position: relative;
   z-index: 2;
 }
 
-/* ISI HEADER */
-header .container {
-  position: relative;
-  z-index: 3;
-}
-
 header h1 {
-  font-size: 32px;
+  font-size: 34px;
   color: #38bdf8;
+  margin-bottom: 10px;
 }
 
 header p {
   color: #e5e7eb;
+  font-size: 15px;
 }
-/* NAVIGATION */
+
+/* ================= NAV ================= */
 nav {
   margin-top: 15px;
-  text-align: center;
 }
 
 nav a {
@@ -84,7 +84,7 @@ nav a:hover {
   color: #38bdf8;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -99,7 +99,7 @@ nav a:hover {
   color: #94a3b8;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -115,17 +115,48 @@ nav a:hover {
   background: #0ea5e9;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 .section {
   padding: 60px 20px;
+  border-bottom: 1px solid #1e293b;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 26px;
 }
 
-/* CARD */
+/* ================= TEXT ================= */
+p {
+  margin-bottom: 15px;
+}
+
+/* HIGHLIGHT */
+.highlight {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* QUOTE (AUTHORITY LOOK) */
+.quote {
+  border-left: 4px solid #38bdf8;
+  padding-left: 15px;
+  margin: 20px 0;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* LIST */
+ul {
+  margin: 10px 0 20px 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* ================= CARD ================= */
 .card {
   background: #020617;
   padding: 20px;
@@ -140,25 +171,51 @@ nav a:hover {
   border-color: #38bdf8;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* FOOTER */
+/* ================= ANIMASI ================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   border-top: 1px solid #1e293b;
   color: #64748b;
   font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+
+  header {
+    height: 260px;
+    background-attachment: scroll; /* parallax off biar smooth di HP */
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
   .hero h2 {
     font-size: 28px;
+  }
+
+  .section {
+    padding: 40px 15px;
   }
 }
