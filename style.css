@@ -22,23 +22,50 @@ body {
 
 /* HEADER */
 header {
-  background: #020617;
-  padding: 20px 0;
-  border-bottom: 1px solid #1e293b;
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('background.jpg') center/cover no-repeat;
+  filter: blur(6px);
+  transform: scale(1.1); /* biar blur tidak kepotong */
+  z-index: 1;
+}
+
+/* OVERLAY GELAP */
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* ISI HEADER */
+header .container {
+  position: relative;
+  z-index: 3;
 }
 
 header h1 {
-  text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   color: #38bdf8;
 }
 
 header p {
-  text-align: center;
-  font-size: 14px;
-  color: #94a3b8;
+  color: #e5e7eb;
 }
-
 /* NAVIGATION */
 nav {
   margin-top: 15px;
