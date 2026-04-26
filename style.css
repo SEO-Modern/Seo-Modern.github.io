@@ -351,3 +351,22 @@ footer {
         background: rgba(0,0,0,0.5);
     }
 }
+
+.gallery-nav {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.nav-home {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.nav-home:hover {
+    opacity: 1;
+}
