@@ -265,6 +265,32 @@ footer {
     padding: 40px;
 }
 
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
 /* ITEM FIX (PENTING) */
 .gallery-item {
     position: relative;
