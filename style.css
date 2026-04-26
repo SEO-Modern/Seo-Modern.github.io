@@ -7,262 +7,30 @@
 body {
     font-family: Georgia, serif;
     background: #ffffff;
-    color: #111111;
+    color: #111;
     line-height: 1.7;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-/* IMAGE */
 .hero-bg img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    transform: scale(1.03);
-    filter: brightness(0.9) contrast(1.05);
+    transform: scale(1.05);
+    filter: brightness(0.85);
 }
 
-/* OVERLAY */
-.hero::before {
-    content: "";
+.overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.2),
-        rgba(0,0,0,0.7)
-    );
-    z-index: 1;
-}
-
-/* FADE */
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0),
-        rgba(255,255,255,0.9)
-    );
-}
-
-/* CTA */
-.hero-cta {
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-}
-
-/* BUTTON */
-.btn-ghost {
-    padding: 10px 26px;
-    border: 1px solid rgba(255,255,255,0.7);
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1.5px;
-    transition: all 0.3s ease;
-}
-
-.btn-ghost:hover {
-    background: white;
-    color: black;
-    border-color: white;
-}
-
-/* =========================
-   STORY
-========================= */
-.story {
-    max-width: 900px;
-    margin: 100px auto;
-    padding: 0 24px;
-}
-
-.story h2 {
-    font-size: 36px;
-    margin-bottom: 24px;
-}
-
-.story p {
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #222;
-}
-
-.story img {
-    width: 100%;
-    margin: 30px 0;
-    border-radius: 6px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-.about {
-    background: #f7f7f7;
-    padding: 100px 24px;
-    text-align: center;
-}
-
-.about h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-.contact {
-    padding: 100px 24px;
-    text-align: center;
-}
-
-.contact h3 {
-    font-size: 30px;
-    margin-bottom: 16px;
-}
-
-.contact p {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.contact a {
-    color: #111;
-    text-decoration: none;
-    border-bottom: 1px solid #111;
-    transition: 0.3s;
-}
-
-.contact a:hover {
-    opacity: 0.6;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    color: #777;
-}
-
-/* =========================
-   GALLERY SECTION (HOME)
-========================= */
-.gallery-section {
-    text-align: center;
-    padding: 120px 20px;
-}
-
-.gallery-section h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-
-.gallery-section p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #444;
-}
-
-/* =========================
-   AUTHOR
-========================= */
-.author-hero {
-    text-align: center;
-    padding: 120px 20px 60px;
-}
-
-.author-hero h1,
-.author-hero p {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.author-hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.author-hero p {
-    font-size: 18px;
-    opacity: 0.7;
-}
-
-.author-content {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 0 24px;
-}
-
-.author-content h2 {
-    margin-top: 40px;
-    margin-bottom: 16px;
-    font-size: 28px;
-}
-
-.author-content p {
-    margin-bottom: 16px;
-    font-size: 18px;
-}
-
-.flow {
-    text-align: center;
-    font-style: italic;
-    margin: 30px 0;
-    opacity: 0.7;
-}
-
-/* =========================
-   GALLERY PAGE
-========================= */
-.gallery-hero {
-    text-align: center;
-    padding: 120px 20px 60px;
-}
-
-.gallery-hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.gallery-hero p {
-    font-size: 18px;
-    opacity: 0.7;
-}
-
-/* GRID */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 40px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
 }
 
 .hero-content {
@@ -273,126 +41,129 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-
     color: white;
-    padding: 0 20px;
+    text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 52px;
     letter-spacing: 2px;
 }
 
 .hero-content p {
-    font-size: 18px;
+    margin: 15px 0 25px;
     opacity: 0.8;
+}
+
+/* BUTTON */
+.btn-ghost {
+    padding: 10px 26px;
+    border: 1px solid rgba(255,255,255,0.7);
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.btn-ghost:hover {
+    background: white;
+    color: black;
+}
+
+/* SECTIONS */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+section {
+    padding: 120px 0;
+}
+
+/* INTRO */
+.intro h2 {
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
-/* ITEM FIX (PENTING) */
+.intro p {
+    font-size: 18px;
+    color: #444;
+}
+
+/* GALLERY */
+.gallery-preview {
+    padding: 60px 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
 .gallery-item {
-    position: relative;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
+    transition: transform 0.6s ease;
 }
 
-/* CAPTION */
-.gallery-caption {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0)
-    );
-
-    color: white;
-    opacity: 0;
-    transition: 0.4s ease;
+.gallery-item:hover img {
+    transform: scale(1.07);
 }
 
-.gallery-item:hover .gallery-caption {
-    opacity: 1;
+/* ABOUT */
+.about {
+    background: #f4f4f4;
 }
 
-/* =========================
-   MOBILE (FINAL FIX)
-========================= */
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* AUTHOR */
+.author h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.author .tagline {
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
+
+.author p {
+    margin-bottom: 16px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-
-    /* HERO FIX */
-    .hero {
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .hero-content h1 {
+        font-size: 36px;
     }
 
-    .hero-bg img {
-        position: relative;
-        width: 100%;
-        height: auto;
-        max-height: 85vh;
-        object-fit: contain;
-        transform: none;
-    }
-
-    .hero::before {
-        background: linear-gradient(
-            to bottom,
-            rgba(0,0,0,0.1),
-            rgba(0,0,0,0.5)
-        );
-    }
-
-    .hero::after {
-        height: 80px;
-    }
-
-    .hero-cta {
-        bottom: 30px;
-    }
-
-    /* GALLERY GRID MOBILE */
     .gallery-grid {
         grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    /* CAPTION selalu muncul di HP */
-    .gallery-caption {
-        opacity: 1;
-        background: rgba(0,0,0,0.5);
     }
 }
 
-.gallery-nav {
-    position: absolute;
-    top: 30px;
-    left: 40px;
-}
-
-.nav-home {
-    text-decoration: none;
-    color: #111;
-    font-size: 14px;
-    letter-spacing: 1px;
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-.nav-home:hover {
-    opacity: 1;
+/* SMALL DETAIL (SIGNATURE) */
+::selection {
+    background: black;
+    color: white;
 }
