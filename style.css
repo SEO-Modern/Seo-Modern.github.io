@@ -14,47 +14,70 @@ body {
 /* HERO */
 .hero {
     height: 100vh;
-    background: url('hero-photo.jpg') center center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
     position: relative;
+    overflow: hidden;
 }
 
+/* BACKGROUND IMAGE (lebih cinematic) */
+.hero {
+    background: url('hero-photo.jpg') center center / cover no-repeat;
+    transform: scale(1.02); /* subtle zoom feel */
+}
+
+/* OVERLAY (upgrade jadi gradient, bukan flat) */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.75)
+    );
+    z-index: 1;
 }
 
+/* HERO CONTENT */
 .hero-content {
     position: relative;
+    z-index: 2;
     color: white;
     max-width: 700px;
-    z-index: 2;
+
+    /* center cinematic */
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    /* subtle motion */
+    animation: fadeUp 1.5s ease forwards;
 }
 
 .hero h1 {
-    font-size: 56px;
-    letter-spacing: 2px;
+    font-size: 64px;
+    letter-spacing: 3px;
     margin-bottom: 16px;
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 28px;
+    opacity: 0.85;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 12px 28px;
     border: 1px solid white;
     color: white;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -62,10 +85,22 @@ body {
     color: black;
 }
 
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* STORY */
 .story {
     max-width: 900px;
-    margin: 80px auto;
+    margin: 100px auto;
     padding: 0 24px;
 }
 
@@ -77,18 +112,19 @@ body {
 .story p {
     margin-bottom: 20px;
     font-size: 18px;
+    color: #222;
 }
 
 .story img {
     width: 100%;
-    margin: 24px 0;
-    border-radius: 4px;
+    margin: 30px 0;
+    border-radius: 6px;
 }
 
 /* ABOUT */
 .about {
     background: #f7f7f7;
-    padding: 80px 24px;
+    padding: 100px 24px;
     text-align: center;
 }
 
@@ -105,7 +141,7 @@ body {
 
 /* CONTACT */
 .contact {
-    padding: 80px 24px;
+    padding: 100px 24px;
     text-align: center;
 }
 
@@ -123,6 +159,11 @@ body {
     color: #111;
     text-decoration: none;
     border-bottom: 1px solid #111;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    opacity: 0.6;
 }
 
 /* FOOTER */
@@ -133,16 +174,16 @@ footer {
     color: #777;
 }
 
+/* GALLERY */
 .gallery-section {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     background: #ffffff;
 }
 
 .gallery-section h2 {
     font-size: 34px;
     margin-bottom: 20px;
-    font-family: Georgia, serif;
 }
 
 .gallery-section p {
