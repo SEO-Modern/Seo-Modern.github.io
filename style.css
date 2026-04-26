@@ -394,7 +394,7 @@ footer {
 
 /* HERO */
 .story-hero {
-    height: 80vh;
+    height: 50vh !important;
     position: relative;
     overflow: hidden;
 }
@@ -406,7 +406,7 @@ footer {
     object-fit: cover;
 
     transform: scale(1.05);
-    filter: brightness(0.85);
+    filter: brightness(0.90);
 }
 
 .story-hero .overlay {
