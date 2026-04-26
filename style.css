@@ -132,3 +132,23 @@ footer {
     font-size: 14px;
     color: #777;
 }
+
+.gallery-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: #ffffff;
+}
+
+.gallery-section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-family: Georgia, serif;
+}
+
+.gallery-section p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
