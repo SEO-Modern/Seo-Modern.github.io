@@ -467,20 +467,30 @@ footer {
 }
 
 /* IMAGE */
-.story-image {
-    padding: 20px 0;
-}
-
-.story-image img {
-    display: block;
-    margin: 0 auto;
-}
-
+/* Matikan efek padding global section */
+.story-image,
 .story-reflection {
-    margin-top: 20px; /* 🔥 bukan padding lagi */
+    padding: 0 !important;
+}
+
+/* Rapetin jarak image */
+.story-image {
+    margin: 20px 0 10px !important;
+}
+
+/* Rapetin reflection */
+.story-reflection {
+    margin: 10px auto 40px !important;
+    max-width: 500px;
     text-align: center;
     font-style: italic;
     opacity: 0.7;
-    max-width: 500px;
-    margin: 30px auto 60px;
+}
+
+/* Biar image lebih rapi */
+.story-image img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
