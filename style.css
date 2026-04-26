@@ -232,3 +232,15 @@ footer {
     font-size: 18px;
     opacity: 0.7;
 }
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh; /* jangan full, biar lebih aman */
+    }
+
+    .hero-bg img {
+        object-position: center top; /* geser fokus ke atas */
+        transform: scale(1.1); /* kompensasi crop */
+    }
+}
