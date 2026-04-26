@@ -1,0 +1,10 @@
+/ index.html
+/ style.css
+/ sitemap.xml
+/ robots.txt
+/ gallery/
+    index.html
+    mesjid-agung-bandung.html
+    danau-toba.html
+    jembatan-pelangi-antapani.html
+/assets/
