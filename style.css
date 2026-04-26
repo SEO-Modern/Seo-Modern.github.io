@@ -177,3 +177,36 @@ footer {
     color: black;
     border-color: white;
 }
+
+.author-content {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 24px;
+}
+
+.author-content h2 {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+
+.author-content p {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.author-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.author-content li {
+    margin-bottom: 8px;
+}
+
+.flow {
+    text-align: center;
+    font-style: italic;
+    margin: 30px 0;
+    opacity: 0.7;
+}
