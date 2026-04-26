@@ -286,10 +286,17 @@ footer {
     transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+/* MOBILE FIX HOMEPAGE HERO */
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        padding: 20px;
+    .hero {
+        height: auto; /* jangan paksa full screen */
+    }
+
+    .hero-bg img {
+        position: relative;
+        height: auto;
+        max-height: 80vh; /* biar tetap gede tapi aman */
+        object-fit: contain; /* ini kunci: jangan crop */
+        transform: none;
     }
 }
