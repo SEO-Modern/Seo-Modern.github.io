@@ -316,10 +316,13 @@ footer {
 
 /* BACKGROUND IMAGE (SAMA PERSIS LOGIKA HOME) */
 .gallery-bg img {
-    position: absolute; /* 🔥 penting */
+    position: absolute;
+    inset: 0; /* 🔥 ini kunci */
+    
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center; /* 🔥 penting */
 
     transform: scale(1.05);
     filter: brightness(0.85);
